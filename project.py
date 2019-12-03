@@ -28,8 +28,8 @@ def outputData():
 
 plt.scatter(dat_out[:,0],dat_out[:,1])
 def variance():
-       print np.mean(dat_out[:,0])
-       print np.mean(dat_out[:,1])
+       print np.var(dat_out[:,0])
+       print np.var(dat_out[:,1])
 if __name__ == "__main__":
     np.polyfit(xvals,makeFakeData(fn1),2)
     outputData()
