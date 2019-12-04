@@ -33,7 +33,7 @@ np.polyfit(xvals,makeFakeData(fn1),2)
 # %%
 import numpy as np
 dat_out = []
-for indx in np.arange(500):
+for indx in np.arange(1000):
     dat_out.append(np.polyfit(xvals,makeFakeData(fn2),1))
 dat_out = np.array(dat_out)
 print(dat_out)
