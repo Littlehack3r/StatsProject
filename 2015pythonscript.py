@@ -42,9 +42,16 @@ print(np.mean(dat_out[:,1]))
 print(np.std(dat_out[:,0]))
 print(np.cov(dat_out[:,0],dat_out[:,1]))
 
+
+print("Var C1: " + str(np.var(dat_out[:,0])))
+print("Var C2: " + str(np.var(dat_out[:,1])))
+print("Cov is: " + str(np.cov(dat_out[:,0],dat_out[:,1])))
+
+
 plt.scatter(dat_out[:,0],dat_out[:,1])
+plt.show()
 
-
+'''
 # %%
 #def mygauss(x, mu, sigma):
 #    np.exp(- np.power(x-mu,2)/(2.*sigma**2) ) /np.sqrt(2*np.pi)
@@ -128,3 +135,4 @@ get_random_coefs(2)
 # %%
 
 
+'''
