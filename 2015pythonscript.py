@@ -89,7 +89,7 @@ print("Average: " + avgstr)
 print("Up Bound: " + strubound)
 print("Low Bound: " + strlbound)
 
-'''
+
 # %%
 #def mygauss(x, mu, sigma):
 #    np.exp(- np.power(x-mu,2)/(2.*sigma**2) ) /np.sqrt(2*np.pi)
@@ -173,4 +173,4 @@ get_random_coefs(2)
 # %%
 
 
-'''
+
