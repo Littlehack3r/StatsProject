@@ -79,7 +79,7 @@ plt.show()
 numbers =[-1,-0.8,-0.6,-0.4,-0.2,0,0.2,0.4,0.6,0.8,1]
 avg = np.average(numbers)
 temp = 1.645 * f_variance
-lamb = temp/sqrt(3)
+lamb = temp/sqrt(11)
 upBound = avg + lamb
 lowBound = avg - lamb
 avgstr = str(avg)
