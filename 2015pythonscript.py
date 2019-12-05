@@ -14,6 +14,16 @@ from matplotlib import pyplot as plt
 # Define the x values (xvals)
 
 # %%
+# This is the data that we were given. It is inputted as a 2D array
+real_data = np.array([[-1,	-4/5,	-3/5,	-2/5,	-1/5,	0,	1/5,	2/5,	3/5,	4/5,	1] , [-8.259416503478342,
+             -6.824790633539753,	-2.940304263374559,	-2.0901353112933863,	1.2015719668831903,
+               4.838039128178995,	3.5609782071742138,	3.651756599989234,	5.485459444665049,	7.618771800923425,	7.4177051254457895]])
+
+# Print statement isn't necessary I believe, but it may help with debugging
+print(real_data)
+
+
+# %%
 xvals = np.linspace(-1,1, 11)
 fn1 = lambda x: 3*np.ones(len(xvals))
 fn2 = lambda x: -2+3.*x
@@ -47,6 +57,19 @@ print("Var C1: " + str(np.var(dat_out[:,0])))
 print("Var C2: " + str(np.var(dat_out[:,1])))
 print("Cov is: " + str(np.cov(dat_out[:,0],dat_out[:,1])))
 
+# This is where the calculations for the variance of the A7 given data start:
+sum_of_cov = np.cov(dat_out[:,0],dat_out[:,1])
+print(sum_of_cov)
+
+
+# Not sure if these print statements are needed for project, added them just in case
+#print("Cov A7 Data C0: " + str(np.cov(real_data[:,0])))
+#print("Cov A7 Data C1: " + str(np.cov(real_data[:,1])))
+
+# This is the calculated variance
+f_variance = np.var(sum_of_cov)
+print("F Variance: ")
+print(f_variance)
 
 plt.scatter(dat_out[:,0],dat_out[:,1])
 plt.show()
