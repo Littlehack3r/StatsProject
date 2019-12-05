@@ -42,6 +42,7 @@ np.polyfit(xvals,makeFakeData(fn1),2)
 
 # %%
 import numpy as np
+from math import *
 dat_out = []
 for indx in np.arange(1000):
     dat_out.append(np.polyfit(xvals,makeFakeData(fn2),1))
@@ -73,6 +74,20 @@ print(f_variance)
 
 plt.scatter(dat_out[:,0],dat_out[:,1])
 plt.show()
+
+
+numbers =[-1,-0.8,-0.6,-0.4,-0.2,0,0.2,0.4,0.6,0.8,1]
+avg = np.average(numbers)
+temp = 1.645 * f_variance
+lamb = temp/sqrt(3)
+upBound = avg + lamb
+lowBound = avg - lamb
+avgstr = str(avg)
+strubound = str(upBound)
+strlbound = str(lowBound)
+print("Average: " + avgstr)
+print("Up Bound: " + strubound)
+print("Low Bound: " + strlbound)
 
 '''
 # %%
